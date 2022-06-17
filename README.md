@@ -32,3 +32,8 @@ Za pomocą buildx można zbudować obrazy na wskazane architektury:
 
 
 Dodatek 1.
+
+Konfiguracja GitHub Container Registry:
+
+![img.png](ghcr.png)
+
