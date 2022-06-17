@@ -1,0 +1,11 @@
+name: zad1
+description: A server app using the shelf package and Docker.
+version: 1.0.0
+
+environment:
+  sdk: '>=2.17.1 <3.0.0'
+
+dependencies:
+#  dio: ^4.0.6
+  shelf: ^1.1.0
+  shelf_router: ^1.0.0
