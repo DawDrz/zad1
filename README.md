@@ -16,7 +16,7 @@ Polecenie do sprawdzenia ile warstw posiada obraz:
 
 Zrzut ekranu okna przeglądarki:
 
-![img.png](zrzut_ekranu.png)
+![zrzut_ekranu](zrzut_ekranu.png)
 
 4. 
 
@@ -35,5 +35,9 @@ Dodatek 1.
 
 Konfiguracja GitHub Container Registry:
 
-![img.png](ghcr.png)
+![ghcr](ghcr.png)
+
+Działanie cache:
+
+![cache](cache.png)
 
