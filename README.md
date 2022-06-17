@@ -41,3 +41,31 @@ Działanie cache:
 
 ![cache](cache.png)
 
+
+Dodatek 2.
+
+1. 
+Uruchamianie rejestru:
+`docker run -d -e REGISTRY_HTTP_ADDR=0.0.0.0:6677 -p 6677:6677 --name reg registry:2`
+
+Pobieranie obrazu:
+`docker pull ubuntu:latest`
+
+Tagowanie obrazu dla utworzonego rejestru:
+`docker image tag ubuntu:latest localhost:6677/ubuntu:latest`
+
+Wysyłanie obrazu do utworzonego rejestru:
+`docker push localhost:6677/ubuntu:latest`
+
+2. 
+
+Najpierw tworzymy katalog przechowujący dane do autoryzacji:
+`mkdir auth`
+
+Tworzymy plik do autoryzacji:
+`docker run --entrypoint htpasswd httpd:2 -Bbn user pass > auth/htpasswd`
+
+Uruchamiamy rejestr na nowo, z opcjami do autoryzacji:
+`
+docker run -d -p 6677:6677 -v "$(pwd)"/auth:/auth --restart=always --name reg -e REGISTRY_HTTP_ADDR=0.0.0.0:6677 -e "REGISTRY_AUTH=htpasswd" -e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm" -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd registry:2
+`
