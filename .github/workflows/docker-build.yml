@@ -40,7 +40,7 @@ jobs:
         with:
           # Wpis ghcr.io odpowiada za wysyłanie obrazu do rejestru GitHuba
           tags: |
-            ghcr.io/DawDrz/zad1
+            ghcr.io/dawdrz/zad1
             dawiddrzew/zad1
           cache-from: type=registry,ref=dawiddrzew/z1:buildcache
           cache-to: type=registry,ref=dawiddrzew/z1:buildcache,mode=max
