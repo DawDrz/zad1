@@ -42,8 +42,8 @@ jobs:
           tags: |
             ghcr.io/dawdrz/zad1
             dawiddrzew/zad1
-          cache-from: type=registry,ref=dawiddrzew/z1:buildcache
-          cache-to: type=registry,ref=dawiddrzew/z1:buildcache,mode=max
+          cache-from: type=registry,ref=dawiddrzew/zad1:buildcache
+          cache-to: type=registry,ref=dawiddrzew/zad1:buildcache,mode=max
           platforms: linux/arm64/v8,linux/amd64
           context: .
           file: ./Dockerfile
